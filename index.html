@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../src/scripts/Shopping-Site.js"></script>
+    <link rel="stylesheet" href="../src/styles/Shopping-Site.css">
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <header style="position:sticky; top:0px;">
+        <div class="brand"> 
+            MyShop.
+        </div>
+        <div>
+        <nav style="font-size: 20px;">
+            <div class="input-group" style="left: 100px;">
+                <input type="text" id="search" placeholder="Search Products" class="form-control" style="width: 300px;box-shadow: none;">
+                <button class="btn input-group-text btn-light" id="sbutton"><span class="bi bi-search"></span></button>
+            </div>
+        </nav>
+        </div>   
+        <div class="buttons">
+            <span class="bi-bi bi-person" style="font-size:23px;"></span>
+            <span class="bi-bi bi-search"></span>
+            <span class="bi-bi bi-heart" id="heart"></span>
+            <button onclick="LoadCartItems()" data-bs-target="#cartDetails" data-bs-toggle="modal" class="bi-bi bi-bag btn btn-info" style="margin:05px 10px;font-size: 18px;padding: 5px;"> Cart - <span id="lblCount"></span></button>
+        </div>
+     </header>
+     <section id = "afterHeader">
+        <nav>
+            <div>
+                <h3>Select Category</h3>
+                <div>
+                    <select onchange="categoryChange()" id="lstCategories" class="form-select w-75">
+                    </select>
+                </div>
+            </div>
+        </nav>
+        <main id="content">
+
+        </main>
+        
+     </section>
+     <div class="modal fade" id="cartDetails" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Cart Details</h2>
+                    <button class="btn-close" data-bs-dismiss="modal" style="box-shadow:none ;" ></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr style="padding: 10px;">
+                                <td>Name</td>
+                                <td>Preview</td>
+                                <td>Price</td>
+                                <dt>Action</dt>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a href="../JS Practice/Orderpage.html" target="_blank " ><button class="btn btn-warning w-100" data-bs-dismiss="modal">Place Order</button></a>
+                </div>
+            </div>
+        </div>
+     </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

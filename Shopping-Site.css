@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+}
+header{
+    padding: 0.8rem;
+    align-items: center;
+    background-color:black;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+}
+.brand{
+    font-size: 28px;
+    margin-left: 25px;
+    font-weight: 600; 
+}
+nav span{
+    margin :10px 10px;
+}
+.buttons span{
+    margin:20px 10px;
+    font-size: 18px;
+    padding: 5px;
+    transition: all 0.4s;
+}
+.buttons span:hover{
+    cursor: pointer;
+    font-size: 18.5px;
+}
+section{
+    display:grid;
+    grid-template-columns:3fr 9fr;
+}
+main .items{
+    margin: 20px 10px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+@media screen and (max-width: 768px) {
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }    
+}
